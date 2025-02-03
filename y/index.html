@@ -1,89 +1,169 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Trade - Best Deals & Exchanges</title>
+    <meta name="description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta name="keywords" content="bargain trade, deals, exchanges, marketplace">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bargain Trade">
+    <link rel="canonical" href="https://www.bargain-trade.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bargain-trade.com/">
+    <meta property="og:title" content="Bargain Trade - Best Deals & Exchanges">
+    <meta property="og:description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta property="og:image" content="https://www.bargain-trade.com/images/Bargain-Trade_logo.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.bargain-trade.com/">
+    <meta property="twitter:title" content="Bargain Trade - Best Deals & Exchanges">
+    <meta property="twitter:description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta property="twitter:image" content="https://www.bargain-trade.com/images/Bargain-Trade_logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.2.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.2.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", Arial, sans-serif;
+      background: url("farm-background.svg") no-repeat center center;
+      background-size: cover;
+      color: #333;
+    }
+    .maintenance-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 10vh auto;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .logo img {
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .logo h1 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #01546e;
+    }
+    .message h2 {
+      font-size: 1.75rem;
+      color: #01546e;
+      margin-bottom: 1rem;
+    }
+    .message p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .countdown {
+      margin: 2rem 0;
+      background: #fff;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+    .countdown p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #0d8475;
+    }
+    #timer {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #01546e;
+    }
+    .contact-info {
+      font-size: 0.9rem;
+    }
+    .contact-info a {
+      color: #01546e;
+      text-decoration: none;
+      border-bottom: 1px dotted #01546e;
+    }
+    .contact-info a:hover {
+      color: #0d8475;
+    }
+    @media (max-width: 600px) {
+      .maintenance-container {
+        margin: 5vh auto;
+        padding: 1.5rem;
       }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+      .logo img {
+        max-width: 140px;
+      }
+      .logo h1 {
+        font-size: 1rem;
+      }
+      .message h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="maintenance-container">
+    <div class="logo">
+      <img src="logo.png" alt="Bargain-Trade Logo" />
+      <h1>bargain-trade.com</h1>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="message">
+      <h2>We’ll be back soon!</h2>
+      <p>Our website is currently undergoing scheduled updating.</p>
+      <p>We appreciate your patience and will be back online shortly.</p>
+    </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div class="countdown">
+      <p>Expected time to complete updating:</p>
+      <span id="timer">Loading...</span>
+    </div>
+
+    <div class="contact-info">
+      <p>Need help? Email us at <a href="mailto:e.nabil@bargain-trade.com">e.nabil@bargain-trade.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    const maintenanceEndDate = new Date("Feb 10, 2025 10:00:00").getTime();
+
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = maintenanceEndDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      const timerElement = document.getElementById("timer");
+      if (distance > 0) {
+        timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        clearInterval(countdownInterval);
+        timerElement.textContent = "Updated!";
+      }
+    }, 1000);
+  </script>
+
+</body>
 </html>
