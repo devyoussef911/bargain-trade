@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+  width="300" 
+  height="300" 
+  viewBox="0 0 300 300" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    1) Background is left transparent so you can overlay on any color.
+    2) Using #01546e (darker teal) for the main shape,
+       and #0d8475 (lighter teal) for accent or calligraphic lines.
+  -->
+
+  <!-- Horse Silhouette (abstract calligraphic style) -->
+  <path
+    d="
+      M150,60
+      C145,45 135,30 120,35  /* curve from top center, shaping the mane */
+      Q105,50 115,65         /* subtle calligraphic-like flourish */
+      T130,80 
+      Q140,85 160,95         /* arching neck to shoulder */
+      C180,105 200,125 195,150  /* body curve */
+      Q190,175 170,190       /* subtle turn toward the hindquarter */
+      T140,195
+      C125,195 110,185 110,170 /* curve back up */
+      Q105,150 125,140
+      T160,125 
+      Q180,120 175,105       /* heading back to shoulder */
+      C170,90 155,75 150,60  /* up to the crest of the neck */
+      Z
+    "
+    fill="#01546e"
+  />
+
+  <!-- Calligraphic “Sakib” in Arabic (سكب) as a flowing accent (abstract).
+       If you prefer simpler text, you can remove or adjust this path. -->
+  <path
+    d="
+      M95,165
+      C100,160 115,150 120,152
+      Q135,158 140,170
+      T145,190
+      Q150,200 158,205
+      T170,205
+      C185,205 190,190 185,180
+      Q180,170 175,168
+      T165,168
+      Q160,170 160,180
+      T160,195
+    "
+    stroke="#0d8475"
+    stroke-width="6"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+
+  <!-- English text: "Sakib" -->
+  <text 
+    x="50%" 
+    y="82%" 
+    text-anchor="middle"
+    fill="#01546e" 
+    font-family="Arial, sans-serif"
+    font-size="36"
+    font-weight="bold">
+    Sakib
+  </text>
+
+  <!-- Arabic text: سكـب  (approx. form) 
+       - Adjust the x,y or font-size so it fits your layout. -->
+  <text
+    x="50%"
+    y="92%"
+    text-anchor="middle"
+    fill="#0d8475"
+    font-family="'Amiri', serif"  <!-- or another Arabic-capable font -->
+    font-size="24"
+    font-weight="400">
+    سكـب
+  </text>
+</svg>

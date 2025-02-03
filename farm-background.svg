@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- 
+    Gradient: from #01546e (top) to #0d8475 (bottom).
+    If the waves aren’t visible enough, increase the opacity 
+    or use a lighter fill color for the waves.
+  -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#01546e" />
+      <stop offset="100%" stop-color="#0d8475" />
+    </linearGradient>
+  </defs>
+
+  <!-- Full background rectangle with gradient -->
+  <rect
+    width="1920"
+    height="1080"
+    fill="url(#bgGradient)"
+  />
+
+  <!-- Top wave (white, slightly stronger opacity than before) -->
+  <path
+    d="
+      M0,0
+      L0,220
+      Q 480,140 960,220
+      T 1920,220
+      L1920,0
+      Z
+    "
+    fill="#ffffff"
+    opacity="0.1"
+  />
+
+  <!-- Bottom wave (white, slightly stronger opacity) -->
+  <path
+    d="
+      M0,1080
+      L0,860
+      Q 480,940 960,860
+      T 1920,860
+      L1920,1080
+      Z
+    "
+    fill="#ffffff"
+    opacity="0.1"
+  />
+</svg>

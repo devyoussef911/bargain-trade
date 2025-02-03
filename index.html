@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Trade - Best Deals & Exchanges</title>
+    <meta name="description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta name="keywords" content="bargain trade, deals, exchanges, marketplace">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bargain Trade">
+    <link rel="canonical" href="https://www.bargain-trade.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bargain-trade.com/">
+    <meta property="og:title" content="Bargain Trade - Best Deals & Exchanges">
+    <meta property="og:description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta property="og:image" content="https://www.bargain-trade.com/images/Bargain-Trade_logo.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.bargain-trade.com/">
+    <meta property="twitter:title" content="Bargain Trade - Best Deals & Exchanges">
+    <meta property="twitter:description" content="Bargain Trade offers the best platform for trading, deals, and bargains. Explore new sales, buy and sell easily. Check back often for the latest updates.">
+    <meta property="twitter:image" content="https://www.bargain-trade.com/images/Bargain-Trade_logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", Arial, sans-serif;
+      background: url("farm-background.svg") no-repeat center center;
+      background-size: cover;
+      color: #333;
+    }
+    .maintenance-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 10vh auto;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .logo img {
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .logo h1 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #01546e;
+    }
+    .message h2 {
+      font-size: 1.75rem;
+      color: #01546e;
+      margin-bottom: 1rem;
+    }
+    .message p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .countdown {
+      margin: 2rem 0;
+      background: #fff;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+    .countdown p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #0d8475;
+    }
+    #timer {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #01546e;
+    }
+    .contact-info {
+      font-size: 0.9rem;
+    }
+    .contact-info a {
+      color: #01546e;
+      text-decoration: none;
+      border-bottom: 1px dotted #01546e;
+    }
+    .contact-info a:hover {
+      color: #0d8475;
+    }
+    @media (max-width: 600px) {
+      .maintenance-container {
+        margin: 5vh auto;
+        padding: 1.5rem;
+      }
+      .logo img {
+        max-width: 140px;
+      }
+      .logo h1 {
+        font-size: 1rem;
+      }
+      .message h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="maintenance-container">
+    <div class="logo">
+      <img src="logo.png" alt="Bargain-Trade Logo" />
+      <h1>bargain-trade.com</h1>
+    </div>
+
+    <div class="message">
+      <h2>We’ll be back soon!</h2>
+      <p>Our website is currently undergoing scheduled updating.</p>
+      <p>We appreciate your patience and will be back online shortly.</p>
+    </div>
+
+    <div class="countdown">
+      <p>Expected time to complete updating:</p>
+      <span id="timer">Loading...</span>
+    </div>
+
+    <div class="contact-info">
+      <p>Need help? Email us at <a href="mailto:e.nabil@bargain-trade.com">e.nabil@bargain-trade.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    const maintenanceEndDate = new Date("Feb 10, 2025 10:00:00").getTime();
+
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = maintenanceEndDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      const timerElement = document.getElementById("timer");
+      if (distance > 0) {
+        timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        clearInterval(countdownInterval);
+        timerElement.textContent = "Updated!";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
